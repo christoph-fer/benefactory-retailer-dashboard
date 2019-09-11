@@ -1,0 +1,112 @@
+<html>
+
+<head>
+    <link rel="icon" href="Assets/ACT_NOW_Logo_(Med).png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="charity_dashboard.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <title>Home | Charity Dashboard</title>
+
+    <script>
+        $(document).ready(function () {
+            $("body").removeClass("preload");
+        });
+    </script>
+
+</head>
+
+<body class="preload">
+
+    <div class="wrapper">
+        <div id="navBar" class="navbar">
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+
+            <img src="Assets/ACT NOW - Benefactory.png" height="50px">
+
+            <a class="navbarselected" href="home_page.html">Home</a>
+            <a href="profile_page.html">Profile</a>
+            <a href="tranactions_page.html">Transactions</a>
+            <a href="campaigns_page.html">Campaigns</a>
+            <div class="navfooter">
+                <a href="help_page.html">Help</a>
+                <a id="ared" href="">Logout</a>
+            </div>
+        </div>
+        <div class="workspace">
+            <div class="header">
+                <img class="ham_menu" id="hamMenu" onclick="openNav()" src="Assets/ham_menu.svg" height="12px">
+                <img class="header_title" src="Assets/home_header.svg" height="31px">
+            </div>
+            <div class="workspacecontent">
+                <span class="bene-light-header">Your Account Status</span>
+                <div class="accountstatus">
+                    <div>
+                        <img src="Assets/status_pass.svg" height="25px">
+                        <div>
+                            <span class="bene-body-subtitle">Account Registered</span>
+                        </div>
+                        <div>
+                            <span>
+                                You've sucessfully created a charity account.
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="Assets/status_warning.svg" height="25px">
+                        <div>
+                            <span class="bene-body-subtitle">Integration Pending</span>
+                        </div>
+                        <div>
+                            <span>
+                                You've sucessfully created a charity account.
+                            </span>
+                        </div>
+                        <br>
+                        <div>
+                            <input id="editButton" class="inputbutton-tertiary" type="button" value="Edit Info" />
+                        </div>
+                    </div>
+                    <div>
+                        <img src="Assets/status_cross.svg" height="25px">
+                        <div>
+                            <span class="bene-body-subtitle">Can't accept payments</span>
+                        </div>
+                        <div>
+                            <span>
+                                You've sucessfully created a charity account.
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $("#editButton").click(() => {
+                $("#editModal").fadeIn(150);
+            });
+            $("#edit-modal-close").click(() => {
+                $("#editModal").fadeOut(150);
+            });
+        });
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("navBar").style.width = "300px";
+        }
+
+        // function closeNav() {
+        //     document.getElementById("mySidenav").style.width = "0";
+        // }
+    </script>
+</body>
+
+</html>

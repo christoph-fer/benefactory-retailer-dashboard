@@ -1,0 +1,271 @@
+<html>
+
+<head>
+    <link rel="icon" href="Assets/ACT_NOW_Logo_(Med).png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="charity_dashboard.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <title>Profile | Charity Dashboard</title>
+
+    <script>
+        $(document).ready(function () {
+            $("body").removeClass("preload");
+        });
+    </script>
+
+</head>
+
+<body class="preload">
+    <div class="modal w3-animate-opacity" id="editModal">
+        <div class="modalbox w3-container w3-center w3-animate-top">
+
+            <!-- w3-container w3-center w3-animate-top -->
+
+            <div class="modal-title">
+                <span>Edit Account Info</span>
+                <div class="modal-button">
+                    <input id="edit-modal-close" class="inputbutton-tertiary" type="button" value="Cancel" />
+                    <input id="edit-modal-close" class="inputbutton-small" type="button" value="Done" />
+                </div>
+            </div>
+            <div class="modalcontent">
+
+                <div class="modal-input-1">
+                    <div>
+                        <label>LOGO</label><br>
+                        <div class="profile-upload-image">
+
+                        </div><br><br>
+                        <input class="inputbutton-small" type="button" value="Upload Logo" /><br><br>
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+                        <label>FIRST NAME</label><br>
+                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
+                    </div>
+                    <div>
+                        <label>FIRST NAME</label><br>
+                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
+                    </div>
+                    <div>
+                        <label>MOBILE NO.</label><br>
+                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
+                    </div>
+                    <div>
+                        <label>COUNTRY</label><br>
+                        <select>
+                            <option>INDIA</option>
+                            <option>USA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-input-2">
+                    <div>
+                        <label>ORGANIZATION NAME</label><br>
+                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
+                    </div>
+                    <div>
+                        <label>ORGANIZATION ADDRESS</label><br>
+                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
+                    </div>
+                    <div>
+                        <label>ORGANIZATION WEBSITE</label><br>
+                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
+                    </div>
+                    <div>
+                        <label>INTRODUCTION</label><br>
+                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
+                    </div>
+                    <div>
+                        <label>CATEGORY</label><br>
+                        <select>
+                            <option>INDIA</option>
+                            <option>USA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-input-2">
+                    <div>
+                        <label>E-MAIL</label><br>
+                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
+                    </div>
+                    <div>
+                        <label>PASSWORD</label><br>
+                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
+                    </div>
+                    <div>
+                        <label>CONFIRM PASSWORD</label><br>
+                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
+                    </div>
+
+                </div>
+                <br><br><br><br><br>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="wrapper">
+        <div id="navBar" class="navbar">
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+
+            <img src="Assets/ACT NOW - Benefactory.png" height="50px">
+
+            <a href="home_page.html">Home</a>
+            <a class="navbarselected" href="profile_page.html">Profile</a>
+            <a href="tranactions_page.html">Transactions</a>
+            <a href="campaigns_page.html">Campaigns</a>
+            <div class="navfooter">
+                <a href="help_page.html">Help</a>
+                <a id="ared" href="#">Logout</a>
+            </div>
+        </div>
+        <div class="workspace">
+            <div class="header">
+                <img class="ham_menu" id="hamMenu" onclick="openNav()" src="Assets/ham_menu.svg" height="12px">
+                <img class="header_title" src="Assets/profile_header.svg" height="31px">
+            </div>
+            <div class="workspacecontent">
+                <span class="bene-light-header">Account Information</span>
+                <br><br>
+                <div class="accountinfo">
+                    <div>
+                        <div>
+                            <span class="bene-caps-small">LOGO</span><br>
+                        </div>
+                        <div>
+                            <div class="profile-upload-image">
+                                <!-- <div>
+                                    <a class="inputbutton-tertiary" href="">Upload Image</a><a
+                                        class="hyperlink-button-secondary" href=""> Remove</a>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="bene-caps-small">FIRST NAME</span><br>
+                        </div>
+                        <div>
+                            <span class="bene-body-subtitle">Christopher</span>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="bene-caps-small">LAST NAME</span><br>
+                        </div>
+                        <div>
+                            <span class="bene-body-subtitle">Fernandes</span>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="bene-caps-small">MOBILE NO.</span><br>
+                        </div>
+                        <div>
+                            <span class="bene-body-subtitle">9892091819</span>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="bene-caps-small">E-MAIL</span><br>
+                        </div>
+                        <div>
+                            <span class="bene-body-subtitle">christoph_fer@outlook.com</span>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="bene-caps-small">COUNTRY</span><br>
+                        </div>
+                        <div>
+                            <span class="bene-body-subtitle">America </span>
+                        </div>
+
+                        <br>
+
+
+
+
+                    </div>
+                    <div>
+
+                        <div>
+                            <span class="bene-caps-small">ORGANIZATION NAME</span><br>
+                        </div>
+                        <div>
+                            <span class="bene-body-subtitle">Volv Media</span>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="bene-caps-small">ORGANIZATION ADDRESS</span><br>
+                        </div>
+                        <div>
+                            <span class="bene-body-subtitle">21-C, Laxmi Industrial Estate, Andheri West,
+                                Mumbai 400076</span>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="bene-caps-small">MOBILE NO.</span><br>
+                        </div>
+                        <div>
+                            <span class="bene-body-subtitle">9892091819</span>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="bene-caps-small">E-MAIL</span><br>
+                        </div>
+                        <div>
+                            <span class="bene-body-subtitle">christoph_fer@outlook.com</span>
+                        </div>
+
+                    </div>
+                    <br><br>
+
+                </div>
+                <div>
+                    <input id="editButton" class="inputbutton" type="button" value="EDIT INFO" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $("#editButton").click(() => {
+                $("#editModal").fadeIn(150);
+            });
+            $("#edit-modal-close").click(() => {
+                $("#editModal").fadeOut(150);
+            });
+        });
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("navBar").style.width = "300px";
+        }
+
+        // function closeNav() {
+        //     document.getElementById("mySidenav").style.width = "0";
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<html>
+
+<head>
+    <link rel="icon" href="Assets/ACT_NOW_Logo_(Med).png" type="image/png" sizes="16x16">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" type="text/css" href="charity_dashboard.css">
+
+    <title>Clean Drinking | Charity Dashboard</title>
+
+
+    <!-- <script>
+                $(document).ready(function() {
+                $("body").removeClass("preload");
+                });
+
+
+        </script> -->
+
+</head>
+
+<body>
+
+
+
+
+
+    <div class="modal w3-animate-opacity" id="editModal">
+        <div class="modalbox w3-container w3-center w3-animate-top">
+
+            <!-- w3-container w3-center w3-animate-top -->
+
+            <div class="modal-title">
+                <span>Edit Campaign Description</span>
+                <div class="modal-button">
+                    <input id="edit-modal-close" class="inputbutton-tertiary" type="button" value="Cancel" />
+                    <input id="edit-modal-close" class="inputbutton-small" type="button" value="Done" />
+                </div>
+                <div>
+                    <div id="toolbar">
+
+                    </div>
+                    <div id="editor">
+
+                    </div>
+                </div>
+            </div>
+            <div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <div class="wrapper">
+
+        <div id="navBar" class="navbar">
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+
+            <img src="Assets/ACT NOW - Benefactory.png" height="50px">
+
+            <a href="home_page.html">Home</a>
+            <a href="profile_page.html">Profile</a>
+            <a href="tranactions_page.html">Transactions</a>
+            <a class="navbarselected" href="campaigns_page.html">Campaigns</a>
+            <div class="navfooter">
+                <a href="help_page.html">Help</a>
+                <a id="ared" href="#">Logout</a>
+            </div>
+        </div>
+        <div class="workspace">
+            <div class="header">
+                <img class="ham_menu" id="hamMenu" onclick="openNav()" src="Assets/ham_menu.svg" height="12px">
+                <img class="header_title" src="Assets/campaigns_header.svg" height="31px">
+            </div>
+            <div class="workspacecontent">
+                <div>
+                    <span class="bene-caps-small">CAMPAIGN TITLE</span><br>
+                </div>
+                <div>
+                    <span class="bene-light-header">Clean Drinking Water</span>
+                </div>
+
+                <br>
+
+                <div>
+                    <span class="bene-caps-small">CAMPAIGN BACKGROUND IMAGE</span><br>
+                </div>
+                <div>
+                    <div class="campaign-upload-image">
+                        <!-- <div>
+                                <a class="hyperlink-button-primary" href="">Upload Image </a><a class="hyperlink-button-secondary" href=""> Remove</a>
+                            </div> -->
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <span class="bene-caps-small">CAMPAIGN DESCRIPTION</span><br>
+                </div>
+
+                <div>
+                    <div class="editable-text-box">
+                        <div>
+                            <span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Integer feugiat scelerisque varius morbi.
+                                Mattis nunc sed blandit libero volutpat sed cras. Sed egestas egestas fringilla
+                                phasellus. Nulla pharetra diam sit amet. Purus semper eget duis at tellus at urna
+                                condimentum. Et netus et malesuada fames ac turpis egestas. Leo urna molestie at
+                                elementum eu facilisis sed. Odio morbi quis commodo odio aenean sed adipiscing. Mi ipsum
+                                faucibus vitae aliquet nec ullamcorper sit amet. Vel elit scelerisque mauris
+                                pellentesque. Tortor at risus viverra adipiscing at. Purus non enim praesent elementum
+                                facilisis leo vel. Tortor id aliquet lectus proin nibh nisl. Id diam vel quam elementum
+                                pulvinar etiam non. Posuere ac ut consequat semper viverra nam libero. Curabitur vitae
+                                nunc sed velit dignissim sodales. Nulla facilisi cras fermentum odio eu feugiat pretium
+                                nibh ipsum. Elit duis tristique sollicitudin nibh sit. Sit amet consectetur adipiscing
+                                elit.
+                            </span>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <input id="editButton" class="inputbutton-tertiary" type="button" value="Edit" />
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <span class="bene-caps-small">WIDGET TITLE</span><br>
+                </div>
+
+                <div>
+                    <div class="editable-text-box">
+                        <div>
+                            <span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </span>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <input id="edit-button" class="inputbutton-tertiary" type="button" value="Edit" />
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <span class="bene-caps-small">WIDGET INFORMATION BOX CONTENT</span><br>
+                </div>
+
+                <div>
+                    <div class="editable-text-box">
+                        <div>
+                            <span>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </span>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <input class="inputbutton-tertiary" type="button" value="Edit" />
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <span class="bene-caps-small">TOTAL CONTRIBUTED</span><br>
+                </div>
+
+                <div>
+                    <div>
+                        <span>
+                            $
+                        </span>
+                        <span class="bene-light-header">
+                            6,420
+                        </span>
+                    </div>
+                </div>
+
+                <br>
+
+                <div>
+                    <span class="bene-caps-small">BRAND PARTNERS</span><br>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $("#editButton").click(() => {
+                $("#editModal").fadeIn(150);
+            });
+            $("#edit-modal-close").click(() => {
+                $("#editModal").fadeOut(150);
+            });
+        });
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("navBar").style.width = "300px";
+        }
+
+        // function closeNav() {
+        //     document.getElementById("mySidenav").style.width = "0";
+        // }
+    </script>
+</body>
+
+</html>
