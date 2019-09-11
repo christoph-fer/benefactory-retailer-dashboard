@@ -116,8 +116,8 @@
             <img src="Assets/ACT NOW - Benefactory.png" height="50px">
 
             <a href="home_page.html">Home</a>
-            <a class="navbarselected" href="profile_page.html">Profile</a>
-            <a href="integrations_page.html">Integrations</a>
+            <a href="profile_page.html">Profile</a>
+            <a class="navbarselected" href="integrations_page.html">Integrations</a>
             <a href="campaigns_page.html">Current Campaign</a>
             <a href="campaigns_page.html">Past Campaigns</a>
             <a href="campaigns_page.html">Contribution Log</a>
@@ -137,145 +137,40 @@
                 <div class="accountinfo">
 
                     <div>
-                        <span class="bene-light-header">Organization Details</span>
+                        <span class="bene-light-header">Choose your platform</span>
                         <br><br>
-                        <div>
-                            <span class="bene-caps-small">LOGO</span><br>
-                        </div>
-                        <div>
-                            <div class="profile-upload-image">
-                                <!-- <div>
-                                    <a class="inputbutton-tertiary" href="">Upload Image</a><a
-                                        class="hyperlink-button-secondary" href=""> Remove</a>
-                                </div> -->
-                            </div>
-                        </div>
 
-                        <br>
-
-                        <div>
-                            <span class="bene-caps-small">ORGANIZATION NAME</span><br>
-                        </div>
-                        <div>
-                            <span class="bene-body-subtitle">Volv Media</span>
-                        </div>
-
-                        <br>
-
-                        <div>
-                            <span class="bene-caps-small">ORGANIZATION ADDRESS</span><br>
-                        </div>
-                        <div>
-                            <span class="bene-body-subtitle">21-C, Laxmi Industrial Estate, Andheri West,
-                                Mumbai 400076</span>
-                        </div>
-
-                        <br>
-
-                        <div>
-                            <span class="bene-caps-small">ORGANIZATION WEBSITE</span><br>
-                        </div>
-                        <div>
-                            <span class="bene-body-subtitle">nykaa.com</span>
-                        </div>
-
-                        <br>
-
-                        <div>
-                            <span class="bene-caps-small">ORGANIZATION DESCRIPTION</span><br>
-                        </div>
-                        <div>
-                            <span class="bene-body-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-                        </div>
-
-
-
+                        < </div> <br><br>
 
                     </div>
                     <div>
-                        <span class="bene-light-header">Point of Contact</span>
-                        <br><br>
-
-                        <div>
-                            <span class="bene-caps-small">FIRST NAME</span><br>
-                        </div>
-                        <div>
-                            <span class="bene-body-subtitle">Christopher</span>
-                        </div>
-
-                        <br>
-
-                        <div>
-                            <span class="bene-caps-small">LAST NAME</span><br>
-                        </div>
-                        <div>
-                            <span class="bene-body-subtitle">Fernandes</span>
-                        </div>
-
-                        <br>
-
-                        <div>
-                            <span class="bene-caps-small">MOBILE NO.</span><br>
-                        </div>
-                        <div>
-                            <span class="bene-body-subtitle">9892091819</span>
-                        </div>
-
-                        <br>
-
-                        <div>
-                            <span class="bene-caps-small">E-MAIL</span><br>
-                        </div>
-                        <div>
-                            <span class="bene-body-subtitle">christoph_fer@outlook.com</span>
-                        </div>
-
-                        <br>
-
-                        <div>
-                            <span class="bene-caps-small">COUNTRY</span><br>
-                        </div>
-                        <div>
-                            <span class="bene-body-subtitle">America </span>
-                        </div>
-
-
-
-
-
+                        <input id="editButton" class="inputbutton" type="button" value="EDIT INFO" />
                     </div>
-                    <br><br>
-
-                </div>
-                <div>
-                    <input id="editButton" class="inputbutton" type="button" value="EDIT INFO" />
                 </div>
             </div>
         </div>
-    </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(() => {
-            $("#editButton").click(() => {
-                $("#editModal").fadeIn(150);
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(() => {
+                $("#editButton").click(() => {
+                    $("#editModal").fadeIn(150);
+                });
+                $("#edit-modal-close").click(() => {
+                    $("#editModal").fadeOut(150);
+                });
             });
-            $("#edit-modal-close").click(() => {
-                $("#editModal").fadeOut(150);
-            });
-        });
-    </script>
+        </script>
 
-    <script>
-        function openNav() {
-            document.getElementById("navBar").style.width = "300px";
-        }
+        <script>
+            function openNav() {
+                document.getElementById("navBar").style.width = "300px";
+            }
 
-        // function closeNav() {
-        //     document.getElementById("mySidenav").style.width = "0";
-        // }
-    </script>
+            // function closeNav() {
+            //     document.getElementById("mySidenav").style.width = "0";
+            // }
+        </script>
 </body>
 
 </html>
