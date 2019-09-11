@@ -40,6 +40,29 @@ body {
   border-width: 0px 0px 1px 0px;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    --bene-red: #ba3027;
+    --bene-lightblue: #1a1a1a;
+    --bene-blue: #92c5e8;
+    --bene-base-medium: #7a7a7a;
+    --bene-base-high: rgb(255, 255, 255);
+    --bene-chrome-low: #101010;
+    --bene-chrome-medium: #242424;
+    --bene-chrome-medium-high: #1b1b1b;
+    --bene-white: rgb(0, 0, 0);
+    --bene-acrylic: rgba(30, 30, 30, 0.6);
+  }
+
+  .navbar > img {
+    content: url("Assets/ACT\ NOW\ -\ Benefactory\ \(Dark\ Mode\).png");
+  }
+
+  .header_title {
+    content: url("Assets/home_header_dark.svg");
+  }
+}
+
 :root {
   --bene-red: #ba3027;
   --bene-lightblue: #edf3f8;
@@ -49,6 +72,12 @@ body {
   --bene-chrome-low: #f9f9f9;
   --bene-chrome-medium: #fcfcfc;
   --bene-chrome-medium-high: #f1f1f1;
+  --bene-white: #fff;
+  --bene-acrylic: rgba(255, 255, 255, 0.6);
+}
+
+.bene-body-base-medium {
+  color: var(--bene-base-medium);
 }
 
 .navbar img {
@@ -115,6 +144,7 @@ body {
   animation: fadein 300ms;
   margin-left: 300px;
 }
+
 .ham_menu {
   display: none;
   margin-bottom: 5px;
@@ -131,7 +161,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: var(--bene-acrylic);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
   z-index: 10;
@@ -146,6 +176,7 @@ body {
 .bene-light-header {
   font-weight: 300;
   font-size: 32px;
+  color: var(--bene-base-high);
 }
 
 .workspacecontent {
@@ -458,6 +489,15 @@ label {
   line-height: 27px;
 }
 
+.bene-label {
+  font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--bene-base-medium);
+  /* line-height: 27px; */
+}
+
 .inputtext {
   font-family: "Work Sans", sans-serif;
   font-size: 13px;
@@ -468,6 +508,7 @@ label {
   outline: none;
   -webkit-appearance: none;
 }
+
 .inputtext:focus {
   filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.1));
 }
@@ -489,6 +530,7 @@ label {
 option {
   padding: 50px;
 }
+
 select {
   font-family: "Work Sans", sans-serif;
   font-size: 13px;
@@ -516,21 +558,86 @@ select {
   padding: 20px;
 }
 
-textarea{
+textarea {
   max-width: 700px;
   min-height: 300px;
   width: auto;
 }
 
+.activecampaigns {
+  margin-top: 20px;
+}
+
+.listviewmedium {
+  display: grid;
+  grid-template-columns: 120px 230px;
+  height: 120px;
+  background-color: var(--bene-white);
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.05));
+  width: fit-content;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 200ms ease-out;
+  align-content: flex-start;
+}
+
+.listviewmedium:hover {
+  filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.05));
+}
+
+.gridviewmedium {
+  display: grid;
+  grid-template-rows: 150px 50px;
+  height: 300px;
+  background-color: var(--bene-white);
+  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.05));
+  width: 250px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 200ms ease-out;
+  align-content: flex-start;
+}
+
+.gridviewmedium:hover {
+  filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.05));
+}
+
+.gridviewimg {
+  background-image: url("Assets/amazon-brazil-fire.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px 5px 0px 0px;
+  height: 150px;
+  background-position: center;
+}
+
+.gridviewcontent {
+  width: 250px;
+  padding: 10px 20px;
+}
+.listviewimg {
+  background-image: url("Assets/amazon-brazil-fire.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px 0px 0px 5px;
+  height: 120px;
+  background-position: center;
+}
+
+.listviewcontent {
+  width: 50px;
+  padding: 10px 20px;
+}
+
 @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .header {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--bene-acrylic);
   }
 }
 
 @media all and (-ms-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .header {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: var(--bene-acrylic);
   }
 }
 
@@ -544,26 +651,33 @@ textarea{
   .workspacecontent {
     padding: 130px 12px;
   }
+
   .workspace {
     margin-left: 0px;
   }
+
   .navbar {
     width: 0px;
     filter: drop-shadow(0px 15px 30px rgba(146, 197, 232, 0.1));
   }
+
   .header_title {
     height: 26px;
   }
+
   .header img {
     margin-left: 12px;
     margin-top: 20px;
   }
+
   .ham_menu {
     display: block;
   }
+
   .bene-light-header {
     font-size: 26px;
   }
+
   .transactionstablehead {
     margin-top: 20px;
   }
@@ -573,6 +687,7 @@ textarea{
   .modalbox {
     margin-top: 0px;
   }
+
   .modalcontent {
     height: 100vh;
   }

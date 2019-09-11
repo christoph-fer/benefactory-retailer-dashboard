@@ -1,34 +1,35 @@
 <html>
 
 <head>
-    <link rel="icon" href="Assets/ACT_NOW_Logo_(Med).png" type="image/png" sizes="16x16">
-    <link rel="stylesheet" type="text/css" href="charity_dashboard.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Assets/ACT_NOW_Logo_(Med).png" type="image/png" sizes="16x16" />
+    <link rel="stylesheet" type="text/css" href="retailer_dashboard.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
-    <title>Home | Charity Dashboard</title>
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet" />
+    <title>Home | Retailer Dashboard</title>
 
     <script>
         $(document).ready(function () {
             $("body").removeClass("preload");
         });
     </script>
-
 </head>
 
 <body class="preload">
-
     <div class="wrapper">
         <div id="navBar" class="navbar">
             <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
 
-            <img src="Assets/ACT NOW - Benefactory.png" height="50px">
+            <img src="Assets/ACT NOW - Benefactory.png" height="50px" />
 
             <a class="navbarselected" href="home_page.html">Home</a>
             <a href="profile_page.html">Profile</a>
-            <a href="tranactions_page.html">Transactions</a>
-            <a href="campaigns_page.html">Campaigns</a>
+            <a href="tranactions_page.html">Integrations</a>
+            <a href="campaigns_page.html">Current Campaign</a>
+            <a href="campaigns_page.html">Past Campaigns</a>
+            <a href="campaigns_page.html">Contribution Log</a>
+            <a href="campaigns_page.html">Tramsfer Donations</a>
             <div class="navfooter">
                 <a href="help_page.html">Help</a>
                 <a id="ared" href="">Logout</a>
@@ -36,52 +37,80 @@
         </div>
         <div class="workspace">
             <div class="header">
-                <img class="ham_menu" id="hamMenu" onclick="openNav()" src="Assets/ham_menu.svg" height="12px">
-                <img class="header_title" src="Assets/home_header.svg" height="31px">
+                <img class="ham_menu" id="hamMenu" onclick="openNav()" src="Assets/ham_menu.svg" height="12px" />
+                <img class="header_title" src="Assets/home_header.svg" height="31px" />
             </div>
             <div class="workspacecontent">
                 <span class="bene-light-header">Your Account Status</span>
                 <div class="accountstatus">
                     <div>
-                        <img src="Assets/status_pass.svg" height="25px">
+                        <img src="Assets/status_pass.svg" height="25px" />
                         <div>
                             <span class="bene-body-subtitle">Account Registered</span>
                         </div>
                         <div>
-                            <span>
+                            <span class="bene-body-base-medium">
                                 You've sucessfully created a charity account.
                             </span>
                         </div>
                     </div>
                     <div>
-                        <img src="Assets/status_warning.svg" height="25px">
+                        <img src="Assets/status_warning.svg" height="25px" />
                         <div>
                             <span class="bene-body-subtitle">Integration Pending</span>
                         </div>
                         <div>
-                            <span>
+                            <span class="bene-body-base-medium">
                                 You've sucessfully created a charity account.
                             </span>
                         </div>
-                        <br>
+                        <br />
                         <div>
                             <input id="editButton" class="inputbutton-tertiary" type="button" value="Edit Info" />
                         </div>
                     </div>
                     <div>
-                        <img src="Assets/status_cross.svg" height="25px">
+                        <img src="Assets/status_cross.svg" height="25px" />
                         <div>
                             <span class="bene-body-subtitle">Can't accept payments</span>
                         </div>
                         <div>
-                            <span>
+                            <span class="bene-body-base-medium">
                                 You've sucessfully created a charity account.
                             </span>
                         </div>
                     </div>
-
                 </div>
 
+                <br /><br /><br /><br />
+
+                <span class="bene-light-header">Your Active Campaign</span>
+                <div class="activecampaigns">
+                    <div class="listviewmedium">
+                        <div class="listviewimg"></div>
+                        <div class="listviewcontent">
+                            <div class="bene-body-subtitle">Amazon Forest Fires</div>
+                            <br />
+                            <div class="bene-label">AMOUNT RAISED</div>
+                            <div class="bene-body-subtitle">$420,420</div>
+                        </div>
+                    </div>
+                </div>
+
+                <br /><br /><br /><br />
+
+                <span class="bene-light-header">Active Benefactory Campaigns</span>
+                <div class="activecampaigns">
+                    <div class="gridviewmedium">
+                        <div class="gridviewimg"></div>
+                        <div class="gridviewcontent">
+                            <div class="bene-body-subtitle">Amazon Forest Fires</div>
+                            <br />
+                            <div class="bene-body-base-medium">In the past 48 hours, 2000 new fires have started in the
+                                Amazon despite the President’s ban on deliberate burning.</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
