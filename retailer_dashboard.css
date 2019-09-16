@@ -54,6 +54,8 @@ body {
     --bene-acrylic: rgba(30, 30, 30, 0.6);
     --bene-nav-color: rgba(146, 197, 232, 0.1);
     --bene-small-shadow: rgba(0, 0, 0, 0.5);
+    --bene-medium-shadow: rgba(0, 0, 0, 0.2);
+    --bene-medium-hover-shadow: rgba(0,0,0,0.7);
   }
 
   .navbar > img {
@@ -78,6 +80,8 @@ body {
   --bene-acrylic: rgba(255, 255, 255, 0.6);
   --bene-nav-color: #fff;
   --bene-small-shadow: rgba(0, 0, 0, 0.05);
+  --bene-medium-shadow: rgba(0, 0, 0, 0.05);
+  --bene-medium-hover-shadow: rgba(0,0,0,0.15);
 }
 
 a {
@@ -325,7 +329,7 @@ a {
   -webkit-appearance: none;
   font-family: "Work Sans", sans-serif;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 10px 30px;
   color: #fff;
   background-color: #ba3027;
@@ -608,7 +612,7 @@ textarea {
   grid-template-columns: 120px 230px;
   height: 120px;
   background-color: var(--bene-alt-high);
-  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.05));
+  filter: drop-shadow(0px 3px 5px var(--bene-medium-shadow));
   width: fit-content;
   border-radius: 5px;
   cursor: pointer;
@@ -617,14 +621,14 @@ textarea {
 }
 
 .listviewmedium:hover {
-  filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.05));
+  filter: drop-shadow(0px 5px 10px var(--bene-medium-hover-shadow));
 }
 
 .gridviewmedium {
   display: grid;
   grid-template-rows: 150px fit-content;
   background-color: var(--bene-alt-high);
-  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.05));
+  filter: drop-shadow(0px 3px 5px var(--bene-medium-shadow));
   width: 250px;
   border-radius: 5px;
   cursor: pointer;
@@ -633,7 +637,7 @@ textarea {
 }
 
 .gridviewmedium:hover {
-  filter: drop-shadow(0px 15px 30px rgba(0, 0, 0, 0.05));
+  filter: drop-shadow(0px 5px 10px var(--bene-medium-hover-shadow));
 }
 
 .gridviewimg > img {
