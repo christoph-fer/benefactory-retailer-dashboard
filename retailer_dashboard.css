@@ -77,7 +77,7 @@ body {
   --bene-base-high: #000;
   /* --bene-chrome-low: #f9f9f9; */
   --bene-chrome-low: #fff;
-  --bene-chrome-medium: #fcfcfc;
+  --bene-chrome-medium: #f5f5f5;
   --bene-chrome-medium-high: #f1f1f1;
   --bene-alt-high: #fff;
   --bene-acrylic: rgba(255, 255, 255, 0.8);
@@ -684,6 +684,32 @@ textarea {
 
 .choosecampaign{
   max-width: 512px;
+}
+
+.tabview{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+}
+
+.tab{
+  display: grid;
+  border-radius: 5px;
+  padding: 10px;
+  opacity: 0.4;
+  transition: 200ms ease-out;
+}
+
+.tab img{
+  height: 100px;
+  width: 150px;
+  object-fit: contain;
+}
+
+.tab:hover{
+  cursor: pointer;
+  background-color: var(--bene-chrome-medium);
+  opacity: 1;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
