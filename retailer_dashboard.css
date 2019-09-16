@@ -467,10 +467,11 @@ body {
   grid-template-columns: 3fr 2fr 3fr 5fr;
   font-weight: 500;
   font-size: 15px;
+  color: var(--bene-base-high);
 }
 
 .transactionstablehead > div {
-  padding: 12px 10px;
+  padding: 0px 10px;
 }
 
 .transactionstablecard > div {
