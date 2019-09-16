@@ -81,7 +81,7 @@ body {
   --bene-nav-color: #fff;
   --bene-small-shadow: rgba(0, 0, 0, 0.05);
   --bene-medium-shadow: rgba(0, 0, 0, 0.05);
-  --bene-medium-hover-shadow: rgba(0,0,0,0.15);
+  --bene-medium-hover-shadow: rgba(0,0,0,0.12);
 }
 
 a {
