@@ -82,7 +82,7 @@ body {
   --bene-alt-high: #fff;
   --bene-acrylic: rgba(255, 255, 255, 0.8);
   --bene-nav-color: #fff;
-  --bene-small-shadow: rgba(0, 0, 0, 0.05);
+  --bene-small-shadow: rgba(0, 0, 0, 0.04);
   --bene-medium-shadow: rgba(0, 0, 0, 0.05);
   --bene-medium-hover-shadow: rgba(0,0,0,0.1);
 }
@@ -546,16 +546,27 @@ label {
   font-size: 13px;
   padding: 10px;
   width: 100%;
-  border: 1px solid var(--bene-chrome-low);
+  /* border: 1px solid var(--bene-chrome-low); */
+  border: none;
   color: var(--bene-base-high);
   background-color: var(--bene-chrome-medium);
-  border-radius: 3px;
+  border-radius: 20px;
   outline: none;
   -webkit-appearance: none;
+  transition: 200ms ease-in;
 }
 
 .inputtext:focus {
-  filter: drop-shadow(0px 1px 2px var(--bene-small-shadow));
+  background-color: var(--bene-alt-high);
+  filter: drop-shadow(0px 2px 4px var(--bene-small-shadow));
+}
+
+.inputtext:hover{
+  background-color: var(--bene-chrome-medium-high);
+}
+
+.inputtext:focus:hover{
+  background-color: var(--bene-alt-high);
 }
 
 .modal-input-1 {
