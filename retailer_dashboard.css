@@ -43,19 +43,21 @@ body {
 @media (prefers-color-scheme: dark) {
   body {
     --bene-red: #ba3027;
-    --bene-lightblue: #1a1a1a;
+    /* --bene-lightblue: #1a1a1a; */
+    --bene-lightblue: #050505;
     --bene-blue: #92c5e8;
     --bene-base-medium: #7a7a7a;
     --bene-base-high: rgb(255, 255, 255);
-    --bene-chrome-low: #101010;
+    --bene-chrome-low: #000000;
     --bene-chrome-medium: #242424;
     --bene-chrome-medium-high: #1b1b1b;
-    --bene-alt-high: #000;
-    --bene-acrylic: rgba(30, 30, 30, 0.6);
+    /* --bene-alt-high: #000; */
+    --bene-alt-high: rgb(10, 10, 10);
+    --bene-acrylic: rgba(0, 0, 0, 0.6);
     --bene-nav-color: rgba(146, 197, 232, 0.1);
     --bene-small-shadow: rgba(0, 0, 0, 0.5);
-    --bene-medium-shadow: rgba(0, 0, 0, 0.2);
-    --bene-medium-hover-shadow: rgba(0,0,0,0.7);
+    --bene-medium-shadow: rgba(15, 15, 15, 0.2);
+    --bene-medium-hover-shadow: rgba(15,15,15,0.7);
   }
 
   .navbar > img {
@@ -78,7 +80,7 @@ body {
   --bene-chrome-medium: #fcfcfc;
   --bene-chrome-medium-high: #f1f1f1;
   --bene-alt-high: #fff;
-  --bene-acrylic: rgba(255, 255, 255, 0.6);
+  --bene-acrylic: rgba(255, 255, 255, 0.8);
   --bene-nav-color: #fff;
   --bene-small-shadow: rgba(0, 0, 0, 0.05);
   --bene-medium-shadow: rgba(0, 0, 0, 0.05);
@@ -212,9 +214,9 @@ a {
 
 .bene-caps-small {
   letter-spacing: 0.5px;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--bene-base-medium);
-  line-height: 24px;
+  line-height: 26px;
 }
 
 .bene-body-title {
@@ -276,15 +278,22 @@ a {
 }
 
 .campaign-upload-image {
-  background-image: url("assets/img/world_vision_logo.png");
+  background-image: url("Assets/placeholder-image.jpg");
   height: 200px;
   width: 300px;
   background-size: cover;
   border-radius: 5px;
-  filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.1));
+  /* filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.1)); */
   margin-top: 5px;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.campaign-upload-image > img{
+  height: 200px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .profile-upload-image {
