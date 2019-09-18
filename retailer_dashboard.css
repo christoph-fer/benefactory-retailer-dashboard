@@ -521,6 +521,13 @@ a {
   grid-gap: 40px;
 }
 
+.integrations {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 800px;
+  grid-gap: 40px;
+}
+
 label {
   font-family: "Work Sans", sans-serif;
   font-size: 12px;
@@ -704,7 +711,7 @@ textarea {
 
 .tabview{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   grid-gap: 20px;
 }
 
