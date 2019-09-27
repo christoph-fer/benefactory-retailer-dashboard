@@ -44,20 +44,20 @@ body {
   body {
     --bene-red: #ba3027;
     /* --bene-lightblue: #1a1a1a; */
-    --bene-lightblue: #050505;
+    --bene-lightblue: #242426;
     --bene-blue: #92c5e8;
     --bene-base-medium: #7a7a7a;
     --bene-base-high: rgb(255, 255, 255);
-    --bene-chrome-low: #000000;
+    --bene-chrome-low: #1a1b1c;
     --bene-chrome-medium: #242424;
     --bene-chrome-medium-high: #1b1b1b;
     /* --bene-alt-high: #000; */
-    --bene-alt-high: rgb(10, 10, 10);
+    --bene-alt-high: #242426;
     --bene-acrylic: rgba(0, 0, 0, 0.6);
     --bene-nav-color: rgba(146, 197, 232, 0.1);
     --bene-small-shadow: rgba(0, 0, 0, 0.5);
     --bene-medium-shadow: rgba(15, 15, 15, 0.2);
-    --bene-medium-hover-shadow: rgba(15,15,15,0.7);
+    --bene-medium-hover-shadow: rgba(15, 15, 15, 0.5);
   }
 
   .navbar > img {
@@ -78,13 +78,13 @@ body {
   /* --bene-chrome-low: #f9f9f9; */
   --bene-chrome-low: #fff;
   --bene-chrome-medium: #f5f5f5;
-  --bene-chrome-medium-high: #f1f1f1;
+  --bene-chrome-medium-high: #eeeeee;
   --bene-alt-high: #fff;
   --bene-acrylic: rgba(255, 255, 255, 0.8);
   --bene-nav-color: #fff;
   --bene-small-shadow: rgba(0, 0, 0, 0.04);
   --bene-medium-shadow: rgba(0, 0, 0, 0.05);
-  --bene-medium-hover-shadow: rgba(0,0,0,0.1);
+  --bene-medium-hover-shadow: rgba(0, 0, 0, 0.1);
 }
 
 a {
@@ -92,12 +92,14 @@ a {
 }
 
 .bene-body-base-medium {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: var(--bene-base-medium);
 }
 
 .bene-body-base-small {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: var(--bene-base-medium);
@@ -227,7 +229,8 @@ a {
 }
 
 .bene-body-subtitle {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: var(--bene-base-high);
   line-height: 24px;
   font-weight: 400;
@@ -289,7 +292,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.campaign-upload-image > img{
+.campaign-upload-image > img {
   height: 200px;
   width: 300px;
   object-fit: cover;
@@ -521,6 +524,13 @@ a {
   grid-gap: 40px;
 }
 
+.transfer-donations {
+  display: grid;
+  align-content: flex-start;
+  grid-template-columns: 1fr;
+  max-width: 800px;
+}
+
 .integrations {
   display: grid;
   grid-template-columns: 1fr;
@@ -547,9 +557,10 @@ label {
 }
 
 .inputtext {
-  background-color: var(--bene-alt-high);
+  /* background-color: var(--bene-alt-high); */
   /* font-family: "Work Sans", sans-serif; */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
   padding: 10px 15px;
   width: 100%;
@@ -564,16 +575,16 @@ label {
 }
 
 .inputtext:focus {
-  background-color: var(--bene-alt-high);
-  filter: drop-shadow(0px 2px 4px var(--bene-small-shadow));
+  background-color: var(--bene-chrome-medium);
+  /* filter: drop-shadow(0px 2px 4px var(--bene-small-shadow)); */
 }
 
-.inputtext:hover{
+.inputtext:hover {
   background-color: var(--bene-chrome-medium-high);
 }
 
-.inputtext:focus:hover{
-  background-color: var(--bene-alt-high);
+.inputtext:focus:hover {
+  background-color: var(--bene-chrome-medium);
 }
 
 .modal-input-1 {
@@ -607,9 +618,8 @@ select {
   -webkit-appearance: none;
 }
 
-select:hover{
+select:hover {
   background-color: var(--bene-chrome-medium-high);
-
 }
 
 .accountstatus {
@@ -705,17 +715,17 @@ textarea {
   padding: 10px 20px;
 }
 
-.choosecampaign{
+.choosecampaign {
   max-width: 512px;
 }
 
-.tabview{
+.tabview {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   grid-gap: 20px;
 }
 
-.tab{
+.tab {
   display: grid;
   border-radius: 5px;
   padding: 10px;
@@ -723,13 +733,13 @@ textarea {
   transition: 200ms ease-out;
 }
 
-.tab img{
+.tab img {
   height: 100px;
   width: 150px;
   object-fit: contain;
 }
 
-.tab:hover{
+.tab:hover {
   cursor: pointer;
   background-color: var(--bene-chrome-medium);
   opacity: 1;
@@ -790,14 +800,13 @@ textarea {
 }
 
 @media only screen and (max-width: 640px) {
-
   .modal-input-1 {
     display: grid;
     grid-template-columns: 1fr;
     padding: 30px;
     grid-gap: 20px;
   }
-  
+
   .modalbox {
     margin-top: 0px;
   }
