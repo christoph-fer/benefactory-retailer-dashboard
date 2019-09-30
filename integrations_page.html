@@ -64,14 +64,14 @@
                             <img src="Assets/woocommerce.png">
                             <span>Woo Commerce</span>
                         </div>
-                        <div class="tab">
+                        <div class="tab" id="customtab" onclick="intCustom()">
                             <img src="Assets/integrations_icon.png" height="20px">
                             <span>Custom</span>
                         </div>
 
                     </div>
 
-                    <div class="custom-doc">
+                    <div class="custom-doc" id="int_custom">
                         <p>
                             Our checkout donation plugin is created for a normal e-commerce web application. When a
                             user clicks a checkbox, the contribution amount is get added to cart value. You can
@@ -347,14 +347,18 @@ Invalid Parameters : {
 
                         <br>
 
+                        <div>
+                            <input id="editButton" class="inputbutton" type="button" value="INTEGRATE" />
+                        </div>
+
                     </div>
 
+
+
                 </div>
 
 
-                <div>
-                    <input id="editButton" class="inputbutton" type="button" value="INTEGRATE" />
-                </div>
+
             </div>
         </div>
     </div>
@@ -375,6 +379,15 @@ Invalid Parameters : {
         function openNav() {
             document.getElementById("navBar").style.width = "300px";
         }
+
+        function intCustom() {
+            document.getElementById("int_custom").style.display = "grid";
+            document.getElementById("customtab").style.fontWeight = "600";
+            document.getElementById("customtab").style.opacity = "1";
+            document.getElementById("customtab").style.settings['background-color'] =
+                "var (--bene-chrome-medium-high)";
+        }
+
 
         // function closeNav() {
         //     document.getElementById("mySidenav").style.width = "0";
