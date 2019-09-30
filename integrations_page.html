@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <link href="Prism/prism 2.css" rel="stylesheet" />
     <title>Integrations | Charity Dashboard</title>
 
     <script>
@@ -18,97 +19,7 @@
 </head>
 
 <body class="preload">
-    <div class="modal w3-animate-opacity" id="editModal">
-        <div class="modalbox w3-container w3-center w3-animate-top">
 
-            <!-- w3-container w3-center w3-animate-top -->
-
-            <div class="modal-title">
-                <span>Edit Account Info</span>
-                <div class="modal-button">
-                    <input id="edit-modal-close" class="inputbutton-tertiary" type="button" value="Cancel" />
-                    <input id="edit-modal-close" class="inputbutton-small" type="button" value="Done" />
-                </div>
-            </div>
-            <div class="modalcontent">
-
-                <div class="modal-input-1">
-                    <div>
-                        <label>LOGO</label><br>
-                        <div class="profile-upload-image">
-
-                        </div><br><br>
-                        <input class="inputbutton-small" type="button" value="Upload Logo" /><br><br>
-                    </div>
-                    <div>
-
-                    </div>
-                    <div>
-                        <label>FIRST NAME</label><br>
-                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
-                    </div>
-                    <div>
-                        <label>FIRST NAME</label><br>
-                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
-                    </div>
-                    <div>
-                        <label>MOBILE NO.</label><br>
-                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
-                    </div>
-                    <div>
-                        <label>COUNTRY</label><br>
-                        <select>
-                            <option>INDIA</option>
-                            <option>USA</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-input-2">
-                    <div>
-                        <label>ORGANIZATION NAME</label><br>
-                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
-                    </div>
-                    <div>
-                        <label>ORGANIZATION ADDRESS</label><br>
-                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
-                    </div>
-                    <div>
-                        <label>ORGANIZATION WEBSITE</label><br>
-                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
-                    </div>
-                    <div>
-                        <label>INTRODUCTION</label><br>
-                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
-                    </div>
-                    <div>
-                        <label>CATEGORY</label><br>
-                        <select>
-                            <option>INDIA</option>
-                            <option>USA</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="modal-input-2">
-                    <div>
-                        <label>E-MAIL</label><br>
-                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
-                    </div>
-                    <div>
-                        <label>PASSWORD</label><br>
-                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
-                    </div>
-                    <div>
-                        <label>CONFIRM PASSWORD</label><br>
-                        <input class="inputtext" type="text" class="form-control" placeholder="" name="First_Name">
-                    </div>
-
-                </div>
-                <br><br><br><br><br>
-
-            </div>
-
-        </div>
-    </div>
     <div class="wrapper">
         <div id="navBar" class="navbar">
             <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
@@ -143,26 +54,306 @@
                     <div class="tabview">
                         <div class="tab">
                             <img src="Assets/shopify.png">
-                            <span class="bene-body-title">Shopify</span>
+                            <span>Shopify</span>
                         </div>
                         <div class="tab">
                             <img src="Assets/magento.png">
-                            <span class="bene-body-title">Magento</span>
+                            <span>Magento</span>
                         </div>
                         <div class="tab">
                             <img src="Assets/woocommerce.png">
-                            <span class="bene-body-title">Woo Commerce</span>
+                            <span>Woo Commerce</span>
                         </div>
                         <div class="tab">
                             <img src="Assets/integrations_icon.png" height="20px">
-                            <span class="bene-body-title">Custom</span>
+                            <span>Custom</span>
                         </div>
 
                     </div>
 
+                    <div class="custom-doc">
+                        <p>
+                            Our checkout donation plugin is created for a normal e-commerce web application. When a
+                            user clicks a checkbox, the contribution amount is get added to cart value. You can
+                            implement the same as per your existing cart flow. When the order is successfully placed
+                            you need to call Benefactory API to send this contribution details along with
+                            transaction_id (customer order_id).
+                        </p>
+                        <p>
+                            We have 3 API’s for retailers so that they can send customers contribution details to
+                            Benefactory.
+                        </p>
+                        <p>
+                            When a retailer becomes part of Benefactory, we provide them a CLIENT_ID and
+                            CLIENT_SECRET. This data is used as credentials for retailer’s authentication. So
+                            retailer has to pass this data with each API call.
+                        </p>
+
+
+                        <p>
+                            Followings are the API details:
+                        </p>
+
+                        <br>
+
+                        <h3>
+                            1. POST v1/paid_contribution
+                        </h3>
+
+                        <p>
+                            This endpoint is used to send
+                            newcontribution to Benefactory. We can integrate this using either form post or javascript
+                            ajax method.
+                        </p>
+
+
+
+                        <script src="Prism/prism.js"></script>
+
+                        <pre><code class="language-java">URL : {baseUrl}/api/v1/paid_contribution
+
+Method : POST
+
+Headers : Content-type : application/json
+
+Parameters : {
+    "customer_email": “example@test.com”, //required
+    "customer_name":'test', //required
+    "customer_contact": ‘’ , //optional,
+    "transaction_id": ‘123’,  //required
+    "client_id": ‘2’,  //required - provided by benefactory,
+    "client_secret": ‘dvhsdvhdsVGS67sdvggtsd’ //required - provided by benefactory
+}
+
+Sample Parameters : {
+    "customer_email":"preet0989@gmail.com",
+    "customer_name":"Preet D",
+    "transaction_id":"qwert123",
+    "customer_contact":"9757303498",
+    "client_id":"1",
+    "client_secret":"jpewnsmJstlmr93AaGs4tNDQ7ZjTjNuo18xKSK3p"
+}
+
+Success Response :
+
+    Success : {
+        "status": "200",
+        "message": "Completed Successfully"
+    },
+    Error Responses : Invalid secret key : {
+        "code": 0,
+        "httpCode": 403,
+        "cause": "Unauthorized Retailer",
+        "message": "Please provide valid credentials.",
+        "status": "failure",
+        "title": "Unauthorized"
+    },
+    Invalid Parameters : {
+        "transaction_id": ["The transaction id field is required."]
+    }</code></pre>
+
+                        <br>
+
+                        <h3>
+                            2. POST v1/pending_contribution
+                        </h3>
+
+                        <h4>
+                            (this is for Indian companies where Cashon Delivery is
+                            required)
+                        </h4>
+
+                        <p>
+                            Retailer should call this API if the order is placed with COD (Cash on Delivery) payment
+                            option.
+                        </p>
+
+                        <pre><code class="language-java">
+URL : {baseUrl}/api/v1/pending_contribution
+                            
+Method : POST
+
+Headers : Content-type : application/json
+
+Parameters : {
+    "customer_email": required,
+    "customer_name": required,
+    "customer_contact": optional,
+    "transaction_id": required,
+    "client_id": required,
+    "client_secret": required
+}
+
+Sample Parameters : {
+    "customer_email":"preet0989@gmail.com",
+    "customer_name":"Preet D",
+    "transaction_id":"qwert123",
+    "customer_contact":"9757303498",
+    "client_id":"1",
+    "client_secret":"jpewnsmJstlmr93AaGs4tNDQ7ZjTjNuo18xKSK3p"
+}
+
+Response :
+
+Success : {
+    "status": "200",
+    "message": "Completed Successfully"
+},
+
+Invalid secret key : {
+    "code": 0,
+    "httpCode": 403,
+    "cause": "Unauthorized Retailer",
+    "message": "Please provide valid credentials.",
+    "status": "failure",
+    "title": "Unauthorized"
+},
+
+Invalid Parameters : {
+    "transaction_id": ["The transaction id field is required."]
+}</code></pre>
+                        <br>
+
+                        <h3>
+                            3. POST v1/refund_contribution
+                        </h3>
+
+                        <p>
+                            This API is used to notify Benefactory that the previous order with contribution has been
+                            cancelled and the amount has been refunded.
+                        </p>
+
+                        <pre><code class="language-java">
+URL :{baseUrl}/api/v1/refund_contribution
+
+Method : POST
+
+Headers : Content-type : application/json
+
+Parameters : {
+    "customer_email": optional,
+    "customer_name": optional,
+    "customer_contact": optional,
+    "transaction_id": required,
+    "client_id": required,
+    "client_secret": required
+}
+
+Sample Parameters : {
+    "customer_email":"preet0989@gmail.com",
+    "customer_name":"Preet D",
+    "transaction_id":"qwert123",
+    "customer_contact":"9757303498",
+    "client_id":"1",
+    "client_secret":"jpewnsmJstlmr93AaGs4tNDQ7ZjTjNuo18xKSK3p"
+}
+
+Response :
+
+Success : {
+    "status": "200",
+    "message": "Completed Successfully"
+},
+
+Invalid secret key : {
+    "code": 0,
+    "httpCode": 403,
+    "cause": "Unauthorized Retailer",
+    "message": "Please provide valid credentials.",
+    "status": "failure",
+    "title": "Unauthorized"
+},
+
+Invalid Parameters : {
+    "transaction_id": ["The transaction id field is required."]
+}
+</code></pre>
+
+                        <br>
+
+                        <h3>
+                            4. POST v1/cron_bulk_contribution
+                        </h3>
+
+                        <p>
+                            This API is used to send contributed transactions in a bulk. You can send old transactions
+                            also for which you want to update the contribution status.
+                        </p>
+
+                        <pre><code class="language-java">
+URL : {baseUrl}/api/v1/cron_bulk_contribution
+
+Method : POST
+
+Headers : Content-type : application/json
+
+Parameters : {
+    "donations_log": [{ "customer_email": optional,
+    "customer_name": optional,
+    "customer_contact": optional,
+    "transaction_id": required,
+    "is_refunded": required
+},
+{
+    "customer_email": optional,
+    "customer_name": optional,
+    "customer_contact": optional,
+    "transaction_id": required,
+    "is_refunded": required //whether order is refunded or not
+}],
+"client_id": required,
+"client_secret": required
+}
+
+Sample Input :{
+    "donations_log": [{
+        "customer_email": "preet0989@gmail.com",
+        "customer_name": "Vanita D",
+        "customer_contact": "9757303498",
+        "transaction_id": "test45689",
+        "is_refunded": "1"
+    },
+    {
+        "customer_email": "preet0989@gmail.com",
+        "customer_name": "Vanita D",
+        "customer_contact": "9757303498",
+        "transaction_id": "test45699",
+        "is_refunded": "0"
+    }],
+    "client_id": "1",
+    "client_secret": "jpewnsmJstlmr93AaGs4tNDQ7ZjTjNuo18xKSK3p"
+}
+
+Response :
+
+Success : { 
+    "status": "200",
+    "message": "Bulk Upload of Order Contribution Completed Successfully"
+}
+
+Invalid secret key : {
+    "code": 0,
+    "httpCode": 403,
+    "cause": "Unauthorized Retailer",
+    "message": "Please provide valid credentials.",
+    "status": "failure",
+    "title": "Unauthorized"
+},
+
+Invalid Parameters : {
+    "transaction_id": ["The transaction id field is required."]
+}
+</code></pre>
+
+                        <br>
+
+                    </div>
+
                 </div>
+
+
                 <div>
-                    <input id="editButton" class="inputbutton" type="button" value="EDIT INFO" />
+                    <input id="editButton" class="inputbutton" type="button" value="INTEGRATE" />
                 </div>
             </div>
         </div>
