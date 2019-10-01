@@ -631,6 +631,166 @@ Invalid Parameters : {
 {% end if %}                                
 </code></pre>
 
+                        <br>
+
+                        <h3>
+                            STEP 7: Go to Settings > Notifications and scroll to the bottom and add the following web
+                            hooks (scroll to the bottom of the page):
+
+                        </h3>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/shopify_4.png">
+
+                        <br>
+
+                        <p>
+                            Order Creation <br>
+                            Order Payment <br>
+                            Order Cancellation <br>
+                            Order Update <br>
+                            <br>
+                            URL:
+                            http://www.benefactory.in/api/v1/shopify_contribute?variant_id=48679630869&client_id=2&client_secret=EGp3dFcKJUSnCBCgWvpNjdXNVsfM5HXseAlO2HIo
+                            <br><br>
+                            (Please replace with the variant id from step 4 and the client id and secret given by
+                            Benefactory)
+
+                        </p>
+
+                        <br>
+
+                        <h3>
+                            STEP 8: Go to Setting > Checkout (this will reset the pre-check at the cart for the
+                            benefactory contribution)
+
+
+                        </h3>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/shopify_5.png">
+
+                        <br>
+
+                        <p>
+                            Scroll down to additional scripts
+
+                        </p>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/shopify_6.png">
+
+                        <br>
+
+                        <p>Copy the following lines to additional scrips and save it: </p>
+
+                        <pre><code class="language-markup">{{ 'bf-shopify.js' | asset_url | script_tag }}
+&lt;script>
+    {% if first_time_accessed %}
+    bf_precheck_reset();
+    {% endif %}
+&lt;/script>
+</code></pre>
+
+                        <br>
+
+                        <h3>
+                            STEP 9: Make sure you have a private app created so that the Ajax API can be accessed
+                        </h3>
+
+                        <p>
+                            Apps > Manage Private Apps > Add a new App
+
+                        </p>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/shopify_7.png">
+
+                        <br>
+
+                        <p>
+                            Just follow the steps
+
+
+                        </p>
+
+                        <br>
+
+                        <h3><i>If you don’t have access to the codebase - you can find the files below</i>
+                        </h3>
+
+                        <h3>
+                            STEP 1: Click on online store and then themes. Select the customize button from your current
+                            theme
+
+                        </h3>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/shopify_8.png">
+
+                        <br>
+
+                        <br>
+
+                        <h3>
+                            STEP 2: In the screen below - Click on More Actions and Edit Code
+                        </h3>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/shopify_9.png">
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/shopify_10.png">
+
+                        <br>
+                        <br>
+
+                        <h3>
+                            Step 3: Look for the same files as per the steps above and edit it. You can look at the file
+                            explorer below for reference
+
+                        </h3>
+
+                        <p>
+                            sections > cart-template.liquid
+
+                        </p>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/shopify_11.png">
+
+                        <br>
+
+                        <p>
+                            Layout > theme.liquid
+
+
+                        </p>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/shopify_12.png">
+
+                        <br>
+
+                        <p>Go to Assets > and click on Add new Asset. Add the bf-shopify.js files and
+                            bf-shopify.scss.liquid files here. Then continue to follow the steps in the article.
+                        </p>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/shopify_13.png">
+
+                        <br>
+
 
 
 
