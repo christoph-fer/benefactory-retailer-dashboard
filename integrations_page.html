@@ -459,6 +459,187 @@ Invalid Parameters : {
 
                     </div>
 
+                    <div class="shopify-doc" id="int_shopify">
+
+                        <h3>
+                            STEP 1: Setup Contribution as a product in Shopify.
+
+                        </h3>
+
+                        <ul type="circle">
+                            <li>Remember to keep tracking inventory as off. Set the amount which you provide us</li>
+                        </ul>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/shopify_1.png">
+
+                        <br>
+
+                        <ul type="disc">
+                            <li>Also Add Vendor Type as Benefactory
+
+                            </li>
+                        </ul>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/shopify_2.png">
+
+                        <br>
+
+                        <p>
+                            Then - Create a new Collection - called ‘All’. This will ensure that the benefactory product
+                            doesn’t show up in your catalog.
+
+                            <br><br>
+
+                            Make sure - it looks like the below:
+
+                        </p>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/shopify_3.png">
+
+                        <br>
+
+                        <p>
+                            And Save it.
+                        </p>
+
+                        <br>
+
+                        <h3>
+                            STEP 2: Two lines of text for Checkbox - add this to your cart-template.liquid file
+
+                            <br>
+
+                            (IF YOU
+                            DON’T HAVE ACCESS TO THE CODEBASE, FOLLOW THE STEPS AT THE END OF THIS DOCUMENT BEFORE
+                            PROCEEDING)
+
+                        </h3>
+
+                        <p>Add these lines to Layout > cart-template.liquid
+                        </p>
+
+                        <script src="Prism/prism.js"></script>
+
+                        <pre><code class="language-markup">&lt;input type="checkbox" id="bf_contribution" onclick="bf_contribution_add()" />
+&lt;label for="contribution">Contribute Rs. 5 to 
+&lt;a target="_blank" href="http://www.benefactory.in">Benefactory&lt;/a>&lt;/label>
+</code></pre>
+
+                        <br>
+
+                        <h3>
+                            STEP 3: Add this to your theme.liquid so the bf-shopify.js gets copied over
+                        </h3>
+
+                        <pre><code class="language-markup">&lt;!--[if (gt IE 9)|!(IE)]>&lt;!-->
+&lt;script src="{{ 'bf-shopify.js' | asset_url }}" defer="defer">&lt;/script>
+&lt;!--&lt;![endif]-->
+&lt;!--[if lte IE 9]>
+&lt;script src="{{ 'bf-shopify.js' | asset_url }}">&lt;/script>
+&lt;![endif]-->
+                          
+                                </code></pre>
+
+
+                        <p>and also add the bf-shopify.js file to your theme > assets folder and the
+                            bf-shopify.scss.liquid files to the assets folder
+                        </p>
+                        <h3>
+                            STEP 4: Update the product Variant ID in the assets > bf-shopify.js file above
+
+                        </h3>
+
+                        <ul type="disc">
+                            <li>To get the Variant ID, Follow the steps here<br>
+                                (<a
+                                    href="https://help.shopify.com/themes/customization/products/find-variant-id)">https://help.shopify.com/themes/customization/products/find-variant-id</a>)
+                            </li>
+                            <ul type="circle">
+                                <li>Go to the contribution product in shopify admin panel and append .xml to the url.
+                                    You’ll find the variant id there.
+                                </li>
+
+                            </ul>
+                        </ul>
+
+                        <h3>
+                            STEP 5: (Optional) Hide the Remove Button for the contribution button in the cart
+                        </h3>
+
+                        <p>You can do this in layout > cart-template.liquid
+                        </p>
+
+                        <ul type="disc">
+                            <li>To get the product id:</li>
+                            <ul type="circle">
+                                <li>Go to the contribution product in shopify admin panel
+
+                                </li>
+
+                            </ul>
+                        </ul>
+
+                        <p>Then write this code near the delete or remove button
+
+                        </p>
+
+                        <script src="Prism/prism.js"></script>
+
+                        <pre><code class="language-liquid">{% if item.product_id != 11402984533 %}
+
+{% end if %}
+</code></pre>
+
+                        <br>
+
+                        <h3>
+                            STEP 6: (Required) Hide the Quantity Picker / Make it non-editable for the quantity picker.
+
+                        </h3>
+
+                        <p>You can do this in layout > cart-template.liquid
+
+                        </p>
+
+                        <ul type="disc">
+                            <li>To get the product id:
+                            </li>
+                            <ul type="circle">
+                                <li>Go to the contribution product in shopify admin panel
+
+
+                                </li>
+
+                            </ul>
+                        </ul>
+
+                        <p>Then write this code near the quantity picker
+
+
+                        </p>
+
+                        <script src="Prism/prism.js"></script>
+
+                        <pre><code class="language-liquid">{% if item.product_id != 11402984533 %}
+
+{% end if %}                                
+</code></pre>
+
+
+
+
+                        <!-- <div>
+                                <input id="editButton" class="inputbutton" type="button" value="INTEGRATE" />
+                            </div> -->
+
+                    </div>
+
 
 
 
