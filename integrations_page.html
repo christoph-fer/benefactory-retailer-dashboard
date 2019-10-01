@@ -224,7 +224,7 @@ Invalid Parameters : {
                         </p>
 
                         <pre><code class="language-java">
-URL :{baseUrl}/api/v1/refund_contribution
+URL : {baseUrl}/api/v1/refund_contribution
 
 Method : POST
 
@@ -288,21 +288,22 @@ Method : POST
 Headers : Content-type : application/json
 
 Parameters : {
-    "donations_log": [{ "customer_email": optional,
-    "customer_name": optional,
-    "customer_contact": optional,
-    "transaction_id": required,
-    "is_refunded": required
-},
-{
-    "customer_email": optional,
-    "customer_name": optional,
-    "customer_contact": optional,
-    "transaction_id": required,
-    "is_refunded": required //whether order is refunded or not
-}],
-"client_id": required,
-"client_secret": required
+    "donations_log": [{ 
+        "customer_email": optional,
+        "customer_name": optional,
+        "customer_contact": optional,
+        "transaction_id": required,
+        "is_refunded": required
+    },
+    {
+        "customer_email": optional,
+        "customer_name": optional,
+        "customer_contact": optional,
+        "transaction_id": required,
+        "is_refunded": required //whether order is refunded or not
+    }],
+    "client_id": required,
+    "client_secret": required
 }
 
 Sample Input :{
@@ -347,9 +348,9 @@ Invalid Parameters : {
 
                         <br>
 
-                        <div>
+                        <!-- <div>
                             <input id="editButton" class="inputbutton" type="button" value="INTEGRATE" />
-                        </div>
+                        </div> -->
 
                     </div>
 
