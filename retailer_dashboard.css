@@ -556,14 +556,14 @@ label {
   /* line-height: 27px; */
 }
 
-#int_custom {
+.custom-doc {
   display: none;
   animation: fadein 300ms;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-#int_magento {
+.magento-doc {
   display: none;
   animation: fadein 300ms;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
