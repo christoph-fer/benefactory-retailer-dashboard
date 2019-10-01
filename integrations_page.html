@@ -56,7 +56,7 @@
                             <img src="Assets/shopify.png">
                             <span>Shopify</span>
                         </div>
-                        <div class="tab">
+                        <div class="tab" id="magentotab" onclick="intMagento()">
                             <img src="Assets/magento.png">
                             <span>Magento</span>
                         </div>
@@ -354,6 +354,112 @@ Invalid Parameters : {
 
                     </div>
 
+                    <div class="magento-doc" id="int_magento">
+
+                        <h3>
+                            STEP 1: Setup Contribution as a Virtual Product in Magento.
+                        </h3>
+
+                        <ul type="circle">
+                            <li>Go to Products / Catalog and click on Add Product</li>
+                            <li>Set the amount which you provide us, product name, sku and visibility
+                            </li>
+                        </ul>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/magento_1.png">
+
+                        <br>
+
+                        <ul type="disc">
+                            <li>Remember to keep tracking inventory as off. Make sure your inventory looks like this:
+                            </li>
+                        </ul>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/magento_2.png">
+
+                        <br>
+
+                        <ul type="disc">
+                            <li>Save your product.
+                            </li>
+                        </ul>
+
+                        <h3>
+                            STEP 2: Modify your cart page
+                        </h3>
+
+                        <p>- Add the checkout box code. Make sure to add it only when there are items in the mini-cart /
+                            cart page.
+                        </p>
+
+                        <script src="Prism/prism.js"></script>
+
+                        <pre><code class="language-markup">&lt;input type="checkbox" id="bf_contribution"/>
+&lt;label for="contribution">Contribute Rs. 5 to 
+&lt;a target="_blank" href="http://www.benefactory.in">Benefactory&lt;/a>&lt;/label>
+</code></pre>
+
+                        <ul type="disc">
+                            <li>make sure to clear the following folders:</li>
+                            <ul type="circle">
+                                <li>pub/static/frontend</li>
+                                <li>var/view_processed</li>
+                                <li>run the following command</li>
+                                <ul type="box">
+                                    <li>php bin/magento cache:flush</li>
+                                    <li>php bin/magento setup:static-content:deploy</li>
+                                </ul>
+                            </ul>
+                        </ul>
+
+                        <br>
+
+                        <h3>
+                            STEP 3: Add the CSS from bf-css-sample.less to _extend.less or wherever you’d like e.g.
+                            /benefactory/css/source/_extend.less
+
+                        </h3>
+
+                        <br>
+
+                        <h3>
+                            STEP 4: Drag & Drop the Benefactory Module under /app/code and install it by typing the
+                            below in the command line
+                        </h3>
+
+                        <p>- Change the client id, client secret as per the credentials shared with you in
+                            BFOrderRegister
+                        </p>
+
+                        <ul type="disc">
+                            <li>// this enables the module
+                                php bin/magento module:enable Benefactory_BFOrder
+                            </li>
+                            <li>// this runs the installation and upgrade scripts
+                                php bin/magento setup:upgrade
+                            </li>
+                        </ul>
+
+                        <br>
+
+                        <h3>
+                            STEP 5: Add the JS Files - RequireJS-Config to /benefactory/requirejs-config.js and the
+                            bf-magento.js file to /benefactory/web/js/bf-magento.js
+                        </h3>
+
+
+
+                        <!-- <div>
+                            <input id="editButton" class="inputbutton" type="button" value="INTEGRATE" />
+                        </div> -->
+
+                    </div>
+
+
 
 
                 </div>
@@ -381,13 +487,26 @@ Invalid Parameters : {
             document.getElementById("navBar").style.width = "300px";
         }
 
-        function intCustom() {
-            document.getElementById("int_custom").style.display = "grid";
-            document.getElementById("customtab").style.fontWeight = "600";
-            document.getElementById("customtab").style.opacity = "1";
-            document.getElementById("customtab").style.settings['background-color'] =
-                "var (--bene-chrome-medium-high)";
-        }
+        // function intCustom() {
+        //     document.getElementById("int_custom").style.display = "grid";
+        //     document.getElementById("customtab").style.fontWeight = "600";
+        //     document.getElementById("customtab").style.opacity = "1";
+        //     document.getElementById("customtab").style.settings['background-color'] =
+        //         "var (--bene-chrome-medium-high)";
+
+        //     document.getElementById("int_magento").style.display = "none";
+        //     document.getElementById("magentotab").style.fontWeight = "400";
+        //     document.getElementById("magentotab").style.opacity = "0.4";
+        // }
+
+        // function intMagento() {
+        //     document.getElementById("int_magento").style.display = "grid";
+        //     document.getElementById("magentotab").style.fontWeight = "600";
+        //     document.getElementById("magentotab").style.opacity = "1";
+        //     document.getElementById("magentotab").style.settings['background-color'] =
+        //         "var (--bene-chrome-medium-high)";
+        //     document.getElementById("int_custom").style.display = "none";
+        // }
 
 
         // function closeNav() {

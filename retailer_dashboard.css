@@ -1,15 +1,15 @@
 body {
-  -webkit-touch-callout: none;
+  /* -webkit-touch-callout: none; */
   /* iOS Safari */
-  -webkit-user-select: none;
+  /* -webkit-user-select: none; */
   /* Safari */
-  -khtml-user-select: none;
+  /* -khtml-user-select: none; */
   /* Konqueror HTML */
-  -moz-user-select: none;
+  /* -moz-user-select: none; */
   /* Firefox */
-  -ms-user-select: none;
+  /* -ms-user-select: none; */
   /* Internet Explorer/Edge */
-  user-select: none;
+  /* user-select: none; */
   /* Non-prefixed version, currently
   supported by Chrome and Opera */
 
@@ -179,7 +179,8 @@ a {
   cursor: pointer;
 }
 
-.header_title {}
+.header_title {
+}
 
 .header {
   position: fixed;
@@ -255,7 +256,7 @@ a {
   font-size: 15px;
 }
 
-.campaignstablecard>div {
+.campaignstablecard > div {
   padding: 24px 20px;
 }
 
@@ -291,7 +292,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.campaign-upload-image>img {
+.campaign-upload-image > img {
   height: 200px;
   width: 300px;
   object-fit: cover;
@@ -310,7 +311,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.campaign-upload-image>div {
+.campaign-upload-image > div {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -492,11 +493,11 @@ a {
   color: var(--bene-base-high);
 }
 
-.transactionstablehead>div {
+.transactionstablehead > div {
   padding: 0px 10px;
 }
 
-.transactionstablecard>div {
+.transactionstablecard > div {
   padding: 12px 10px;
 }
 
@@ -555,11 +556,27 @@ label {
   /* line-height: 27px; */
 }
 
-.custom-doc {
+#int_custom {
   display: none;
   animation: fadein 300ms;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#int_magento {
+  display: none;
+  animation: fadein 300ms;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.doc-pictures {
+  display: grid;
+  justify-self: center;
+  max-width: 800px;
+  margin: 20px;
+
+  /* filter: drop-shadow(0px 7px 10px var(--bene-medium-hover-shadow)); */
 }
 
 .inputtextarea {
@@ -668,11 +685,11 @@ select:hover {
   min-width: 800px;
 }
 
-.accountstatus>div {
+.accountstatus > div {
   max-width: 240px;
 }
 
-.accountstatus>div>img {
+.accountstatus > div > img {
   padding: 20px;
 }
 
@@ -722,7 +739,7 @@ textarea {
   filter: drop-shadow(0px 5px 10px var(--bene-medium-hover-shadow));
 }
 
-.gridviewimg>img {
+.gridviewimg > img {
   width: 250px;
   /* background-image: url("Assets/amazon-brazil-fire.jpg"); */
   background-size: cover;
