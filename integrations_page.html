@@ -800,6 +800,133 @@ Invalid Parameters : {
 
                     </div>
 
+                    <div class="woocommerce-doc" id="int_woocommerce">
+
+                        <ul type="disc">
+                            <li>Add Benefactory product.</li>
+                            <li>In Product data, select “virtual product” option and from the General tab, enter the
+                                amount in the regular price input section</li>
+                            <li>Click on Inventory, make sure the “sku” is “benefactory_donation”</li>
+                            <li>Also, remember to check the “sold individually” section. It should look something like
+                                this.</li>
+                        </ul>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/woocommerce_1.png">
+
+                        <br>
+
+                        <ul type="disc">
+                            <li>Now from the left menu tab, click on Products > All Products.</li>
+                            <li>Search for the Benefactory product you just created and note down the ID</li>
+                        </ul>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/woocommerce_2.png">
+
+                        <br>
+
+                        <ul type="disc">
+                            <li>Step 1: Log in to your WordPress account and make sure you have the plugin called
+                                “Beaver
+                                Builder” installed.</li>
+
+                        </ul>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/woocommerce_3.png">
+
+                        <br>
+
+                        <ul type="disc">
+                            <li>Step 2: After installation of “Beaver Builder”, activate the plugin.</li>
+
+                        </ul>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/woocommerce_4.png">
+
+                        <br>
+
+                        <ul type="disc">
+                            <li>Step 3: Go to Pages and click on “cart”. Select the Beaver Builder option.</li>
+
+                        </ul>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/woocommerce_5.png">
+
+                        <br>
+
+                        <ul type="disc">
+                            <li>Once on the page, click on the “+” symbol, drag and drop “&lt;> HTML” wherever you’d
+                                like
+                                the Benefactory checkbox to be, preferably above the cart items.</li>
+
+                        </ul>
+
+                        <br>
+
+                        <img class="doc-pictures" src="Assets/Docs/woocommerce_6.png">
+
+                        <br>
+
+                        <ul type="disc">
+                            <li>When the dialog box appears, just paste the following code into it.</li>
+
+                        </ul>
+
+                        <p>Code:</p>
+
+                        <script src="Prism/prism.js"></script>
+
+                        <pre><code class="language-markup">&lt;div>
+    &lt;iframe style='width: 400px'
+        frameborder='0' 
+        scrolling='no' 
+        height='120px' 
+        src='https://ttstaging.benefactory.in/admin/widgets/retailers/1'>
+    &lt;/iframe>
+&lt;/div>
+
+&lt;a id="bf_contribution_link" href="/cart?add-to-cart=57">
+    &lt;input type="checkbox" id="bf_contribution"/>
+&lt;/a>
+
+&lt;label for="contribution">Contribute Rs. 5 to 
+    &lt;a target="_blank" href="http://www.benefactory.in">Benefactory&lt;/a>
+&lt;/label>
+</code></pre>
+
+                        <br>
+
+                        <i><b>Delivery URL:</b> https://ttdev.benefactory.in/api/v1/wc_contribute?client_id=6&client_secret=lXOTEh4qsFQnTbvitsmwDad1qbXF&sku=benefactory_donation</i>
+
+                        <br>
+
+                        <i><b>Note:</b> Replace the highlighted client_id and client_secret with the ones provided to you at the time of integration.</i>
+
+                        <br>
+
+                        <i><b>Secret:</b> Will be provided at the time of integration.</i>
+
+                        <br>
+
+                        <ul type="disc">
+                            <li>Save Webhook and the integration is complete.
+                            </li>
+
+                        </ul>
+
+
+                
+                    </div>
+
 
 
 
