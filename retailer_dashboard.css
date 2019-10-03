@@ -179,11 +179,9 @@ a {
   cursor: pointer;
 }
 
-.header_title {
-}
 
 .header {
-  position: fixed;
+  position: fixed !important;
   width: 100%;
   height: 100px;
   background-color: var(--bene-acrylic);
@@ -256,7 +254,7 @@ a {
   font-size: 15px;
 }
 
-.campaignstablecard > div {
+.campaignstablecard>div {
   padding: 24px 20px;
 }
 
@@ -292,7 +290,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.campaign-upload-image > img {
+.campaign-upload-image>img {
   height: 200px;
   width: 300px;
   object-fit: cover;
@@ -311,7 +309,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.campaign-upload-image > div {
+.campaign-upload-image>div {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -384,10 +382,6 @@ a {
 
 .inputbutton-tertiary:hover {
   text-decoration: underline;
-}
-
-.inputbutton-tertiary:active {
-  /* background-color: #8d261e; */
 }
 
 .modal {
@@ -493,19 +487,23 @@ a {
   color: var(--bene-base-high);
 }
 
-.transactionstablehead > div {
+.transactionstablehead>div {
   padding: 0px 10px;
 }
 
-.transactionstablecard > div {
+.transactionstablecard>div {
   padding: 12px 10px;
 }
 
 .tableidname {
-  min-width: 130px;
+  min-width: 200px;
 }
 
 .tablepay {
+  min-width: 100px;
+}
+
+.tabledate {
   min-width: 100px;
 }
 
@@ -514,7 +512,7 @@ a {
 }
 
 .tableemail {
-  min-width: 200px;
+  min-width: 300px;
 }
 
 .accountinfo {
@@ -556,33 +554,39 @@ label {
   /* line-height: 27px; */
 }
 
-.custom-doc {
+/* .custom-doc {
   display: none;
   animation: fadein 300ms;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
+  line-height: 27px;
+} */
 
-.magento-doc {
+.doc {
   display: none;
   animation: fadein 300ms;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 27px;
 }
 
+/* 
 .shopify-doc {
   display: none;
   animation: fadein 300ms;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 27px;
 }
 
 .woocommerce-doc {
   display: grid;
+  width: auto;
   animation: fadein 300ms;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
+  line-height: 27px;
+} */
 
 .doc-pictures {
   display: grid;
@@ -700,11 +704,11 @@ select:hover {
   min-width: 800px;
 }
 
-.accountstatus > div {
+.accountstatus>div {
   max-width: 240px;
 }
 
-.accountstatus > div > img {
+.accountstatus>div>img {
   padding: 20px;
 }
 
@@ -754,7 +758,7 @@ textarea {
   filter: drop-shadow(0px 5px 10px var(--bene-medium-hover-shadow));
 }
 
-.gridviewimg > img {
+.gridviewimg>img {
   width: 250px;
   /* background-image: url("Assets/amazon-brazil-fire.jpg"); */
   background-size: cover;
@@ -791,25 +795,32 @@ textarea {
 
 .tabview {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   grid-gap: 20px;
 }
 
 .tab {
-  display: grid;
   border-radius: 5px;
-  padding: 10px;
-  opacity: 0.4;
+  padding: 20px;
+  opacity: 0.2;
   transition: 200ms ease-out;
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   font-size: 17px;
+  grid-gap: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  background-color: none;
+  fill: none;
 }
 
 .tab img {
-  height: 100px;
-  width: 150px;
   object-fit: contain;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 .tab:hover {
@@ -818,11 +829,12 @@ textarea {
   opacity: 1;
 }
 
-.tab:active {
+.tab:focus {
   cursor: pointer;
-  background-color: var(--bene-chrome-medium-high);
+  background-color: var(--bene-alt-high);
   opacity: 1;
   font-weight: 600;
+  filter: drop-shadow(0px 5px 10px var(--bene-medium-hover-shadow));
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
@@ -877,6 +889,11 @@ textarea {
   .transactionstablehead {
     margin-top: 20px;
   }
+
+  .doc-pictures {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 640px) {
@@ -893,6 +910,11 @@ textarea {
 
   .modalcontent {
     height: 100vh;
+  }
+
+  .activecampaigns {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
   }
 }
 

@@ -1,9 +1,10 @@
 <html>
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="icon" href="Assets/ACT_NOW_Logo_(Med).png" type="image/png" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="retailer_dashboard.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800,900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
@@ -52,6 +53,26 @@
                     </div>
 
                     <div class="tabview">
+                        <button class="tab" onclick="openDoc(event, 'Shopify')">
+                            <img src="Assets/shopify.png">
+                            <span>Shopify</span>
+                        </button>
+                        <button class="tab" onclick="openDoc(event, 'Magento')">
+                            <img src="Assets/magento.png">
+                            <span>Magento</span>
+                        </button>
+                        <button class="tab" onclick="openDoc(event, 'Woocommerce')">
+                            <img src="Assets/woocommerce.png">
+                            <span>Woo Commerce</span>
+                        </button>
+                        <button class="tab" onclick="openDoc(event, 'Custom')">
+                            <!-- <img src="Assets/integrations_icon.png"> -->
+                            <span>Custom</span>
+                        </button>
+
+                    </div>
+
+                    <!-- <div class="tabview">
                         <div class="tab">
                             <img src="Assets/shopify.png">
                             <span>Shopify</span>
@@ -65,13 +86,13 @@
                             <span>Woo Commerce</span>
                         </div>
                         <div class="tab" id="customtab" onclick="intCustom()">
-                            <img src="Assets/integrations_icon.png" height="20px">
+                            <img src="Assets/integrations_icon.png">
                             <span>Custom</span>
                         </div>
 
-                    </div>
+                    </div> -->
 
-                    <div class="custom-doc" id="int_custom">
+                    <div class="doc" id="Custom">
                         <p>
                             Our checkout donation plugin is created for a normal e-commerce web application. When a
                             user clicks a checkbox, the contribution amount is get added to cart value. You can
@@ -354,7 +375,7 @@ Invalid Parameters : {
 
                     </div>
 
-                    <div class="magento-doc" id="int_magento">
+                    <div class="doc" id="Magento">
 
                         <h3>
                             STEP 1: Setup Contribution as a Virtual Product in Magento.
@@ -459,7 +480,7 @@ Invalid Parameters : {
 
                     </div>
 
-                    <div class="shopify-doc" id="int_shopify">
+                    <div class="doc" id="Shopify">
 
                         <h3>
                             STEP 1: Setup Contribution as a product in Shopify.
@@ -556,9 +577,10 @@ Invalid Parameters : {
                         </h3>
 
                         <ul type="disc">
-                            <li>To get the Variant ID, Follow the steps here<br>
-                                (<a
-                                    href="https://help.shopify.com/themes/customization/products/find-variant-id)">https://help.shopify.com/themes/customization/products/find-variant-id</a>)
+                            <li>To get the Variant ID, Follow the steps<a
+                                    href="https://help.shopify.com/themes/customization/products/find-variant-id">
+                                    here.</a><br>
+
                             </li>
                             <ul type="circle">
                                 <li>Go to the contribution product in shopify admin panel and append .xml to the url.
@@ -652,7 +674,11 @@ Invalid Parameters : {
                             Order Update <br>
                             <br>
                             URL:
-                            http://www.benefactory.in/api/v1/shopify_contribute?variant_id=48679630869&client_id=2&client_secret=EGp3dFcKJUSnCBCgWvpNjdXNVsfM5HXseAlO2HIo
+
+                            <a
+                                href="http://www.benefactory.in/api/v1/shopify_contribute?variant_id=48679630869&client_id=2&client_secret=EGp3dFcKJUSnCBCgWvpNjdXNVsfM5HXseAlO2HIo">Click
+                                here.</a>
+
                             <br><br>
                             (Please replace with the variant id from step 4 and the client id and secret given by
                             Benefactory)
@@ -800,7 +826,7 @@ Invalid Parameters : {
 
                     </div>
 
-                    <div class="woocommerce-doc" id="int_woocommerce">
+                    <div class="doc" id="Woocommerce">
 
                         <ul type="disc">
                             <li>Add Benefactory product.</li>
@@ -905,11 +931,16 @@ Invalid Parameters : {
 
                         <br>
 
-                        <i><b>Delivery URL:</b> https://ttdev.benefactory.in/api/v1/wc_contribute?client_id=6&client_secret=lXOTEh4qsFQnTbvitsmwDad1qbXF&sku=benefactory_donation</i>
+                        <i><b>Delivery URL:</b>
 
-                        <br>
+                            <a
+                                href="https://ttdev.benefactory.in/api/v1/wc_contribute?client_id=6&client_secret=lXOTEh4qsFQnTbvitsmwDad1qbXF&sku=benefactory_donation">Click
+                                here
+                            </a> </i> <br>
 
-                        <i><b>Note:</b> Replace the highlighted client_id and client_secret with the ones provided to you at the time of integration.</i>
+                        <i><b>Note:</b> Replace the highlighted client_id and client_secret with the ones
+                            provided to
+                            you at the time of integration.</i>
 
                         <br>
 
@@ -924,7 +955,7 @@ Invalid Parameters : {
                         </ul>
 
 
-                
+
                     </div>
 
 
@@ -938,7 +969,7 @@ Invalid Parameters : {
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <script type="text/javascript">
         $(document).ready(() => {
             $("#editButton").click(() => {
@@ -948,6 +979,23 @@ Invalid Parameters : {
                 $("#editModal").fadeOut(150);
             });
         });
+    </script>
+
+    <script>
+        function openDoc(evt, docName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("doc");
+
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                // tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(docName).style.display = "grid";
+            // evt.currentTarget.className += " active";
+        }
     </script>
 
     <script>
