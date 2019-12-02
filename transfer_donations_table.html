@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <meta name="theme-color" content="#BA3027" />
+    <link rel="icon" href="Assets/ACT_NOW_Logo_(Med).png" type="image/png" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="retailer_dashboard.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
+    <title>Transfer Donations | Charity Dashboard</title>
+
+    <script>
+        $(document).ready(function () {
+            $("body").removeClass("preload");
+        });
+    </script>
+
+</head>
+
+<body class="preload">
+
+    <div class="wrapper">
+        <div id="navBar" class="navbar">
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+
+            <img src="Assets/ACT NOW - Benefactory.png" height="50px">
+
+            <a href="home_page.html">Home</a>
+            <a href="profile_page.html">Profile</a>
+            <a href="integrations_page.html">Integrations</a>
+            <a href="current_campaign.html">Current Campaign</a>
+            <a href="past_campaigns.html">Past Campaigns</a>
+            <a href="contribution_log.html">Contribution Log</a>
+            <a class="navbarselected" href="campaigns_page.html">Transfer Donations</a>
+            <div class="navfooter">
+                <a href="help_page.html">Help</a>
+                <a id="ared" href="#">Logout</a>
+            </div>
+        </div>
+        <div class="workspace">
+            <div class="header">
+                <img class="ham_menu" id="hamMenu" onclick="openNav()" src="Assets/ham_menu.svg" height="12px">
+                <img class="header_title" src="Assets/transfer_donations.svg" height="31px">
+            </div>
+            <div class="workspacecontent">
+
+                <div class="transfer-donations">
+
+                    <div>
+                        <span class="bene-light-header">Bank Transfer</span>
+                        <br><br>
+
+                    </div>
+
+                    <br><br>
+
+                    <div class="transfer-donations-table">
+                        <div class="transfer-donations-table-content">
+                            <div class="transfer-donations-table-content-head">
+                                Beneficiary Name
+                            </div>
+
+                            <div class="transfer-donations-table-content-body">
+                                Si Creva Capital Services PVT. LTD.
+                            </div>
+
+
+                            <div class="transfer-donations-table-content-head">
+                                Bank
+                            </div>
+
+                            <div class="transfer-donations-table-content-body">
+                                IDFC Bank
+                            </div>
+
+
+                            <div class="transfer-donations-table-content-head">
+                                Account No.
+                            </div>
+
+                            <div class="transfer-donations-table-content-body">
+                                7770179773573453
+                            </div>
+
+
+                            <div class="transfer-donations-table-content-head">
+                                IFSC
+                            </div>
+
+                            <div class="transfer-donations-table-content-body">
+                                IDFB00125343
+                            </div>
+
+
+                            <div class="transfer-donations-table-content-head">
+                                Account Type
+                            </div>
+
+                            <div class="transfer-donations-table-content-body">
+                                Current
+                            </div>
+
+
+                            <div class="transfer-donations-table-content-head">
+                                Branch
+                            </div>
+
+                            <div class="transfer-donations-table-content-body">
+                                Prabhadevi
+                            </div>
+
+                        </div>
+
+                        <p>Note: You can make IMPS/NEFT via bank website to avoid convenience fees.</p>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $("#editButton").click(() => {
+                $("#editModal").fadeIn(150);
+            });
+            $("#edit-modal-close").click(() => {
+                $("#editModal").fadeOut(150);
+            });
+        });
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("navBar").style.width = "300px";
+        }
+
+        // function closeNav() {
+        //     document.getElementById("mySidenav").style.width = "0";
+        // }
+    </script>
+</body>
+
+</html>

@@ -40,13 +40,14 @@ body {
   border-width: 0px 0px 1px 0px;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   body {
     --bene-red: #ba3027;
     --bene-lightblue: #1a1a1a;
     --bene-lightblue: #242426;
     --bene-blue: #92c5e8;
     --bene-base-medium: #7a7a7a;
+    --bene-border: #3d3d3d;
     --bene-base-high: rgb(255, 255, 255);
     --bene-chrome-low: #1a1b1c;
     --bene-chrome-medium: #242424;
@@ -60,23 +61,24 @@ body {
     --bene-medium-hover-shadow: rgba(15, 15, 15, 0.5);
   }
 
-  .navbar > img {
+  .navbar>img {
     content: url("Assets/ACT\ NOW\ -\ Benefactory\ \(Dark\ Mode\).png");
   }
 
   .header_title {
     content: url("Assets/home_header_dark.svg");
   }
-} */
+}
 
 :root {
   --bene-red: #ba3027;
   --bene-lightblue: #edf3f8;
   --bene-blue: #92c5e8;
   --bene-base-medium: #7a7a7a;
+  --bene-border: #F5F5F5;
   --bene-base-high: #000;
   /* --bene-chrome-low: #f9f9f9; */
-  --bene-chrome-low: #fff;
+  --bene-chrome-low: #f9f9f9;
   --bene-chrome-medium: #f5f5f5;
   --bene-chrome-medium-high: #eeeeee;
   --bene-alt-high: #fff;
@@ -527,6 +529,40 @@ a {
   align-content: flex-start;
   grid-template-columns: 1fr;
   max-width: 800px;
+}
+
+.transfer-donations-table {
+  font-family: 'Source Sans Pro', sans-serif;
+  display: grid;
+  align-content: flex-start;
+  grid-template-columns: 1fr;
+  max-width: 500px;
+  background-color: var(--bene-alt-high);
+  filter: drop-shadow(0px 3px 5px var(--bene-medium-shadow));
+  border-radius: 5px;
+
+}
+
+.transfer-donations-table-content {
+  display: grid;
+  align-content: flex-start;
+  grid-template-columns: 1fr 1fr;
+  color: var(--bene-base-high);
+}
+
+.transfer-donations-table>p {
+  color: #7a7a7a;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.transfer-donations-table-content>div {
+  padding: 20px;
+  border-bottom: var(--bene-border) solid 1px;
+}
+
+.transfer-donations-table-content-head {
+  font-weight: 600;
 }
 
 .integrations {
